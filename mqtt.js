@@ -7,7 +7,7 @@ var client  = mqtt.connect('mqtt://test.mosquitto.org')
 client.on('connect', function () {
   client.subscribe('presence', function (err) {
     if (!err) {
-      client.publish('presence', 'Hello from robbe')
+      client.publish('presence', 'Hello has subscribed')
     }
     data = GPIO.readInputs();
   })
@@ -41,12 +41,3 @@ GPIO.mypin.watch(function(err,value){
   }
   
 })
-
-// app.Interval = setInterval(async function() {
-//   if (app.socket) {
-//       //console.log('Reading inputs')
-//       app.socket.emit('inputs', GPIO.readInputs())
-//   } else {
-//       //console.log('no socket')
-//   }
-// }, 1000)

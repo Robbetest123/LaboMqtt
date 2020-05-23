@@ -8,9 +8,7 @@ class GPIO {
         this.mypin = new Gpio(17, 'in','both')
         /** 3 inputs */
         this.inputs = []
-        //this.inputs.push(new Gpio(17, 'in'))
-        // this.inputs.push(new Gpio(27, 'in'))
-        // this.inputs.push(new Gpio(22, 'in'))
+        
     }
     
     relaisOn() {

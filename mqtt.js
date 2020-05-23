@@ -7,7 +7,7 @@ var client  = mqtt.connect('mqtt://test.mosquitto.org')
 client.on('connect', function () {
   client.subscribe('presence', function (err) {
     if (!err) {
-      client.publish('presence', 'Hello has robbe subscribed')
+      client.publish('presence', 'Hello robbe has subscribed')
     }
     data = GPIO.readInputs();
   })
